@@ -33,3 +33,34 @@ Inject the fastdb service:
 
 All methods of $fastdb return promises.
 
+Set an item:
+
+        $fastdb.setItem(key, value)
+
+Get an item:
+
+        $fastdb.getItem(key)
+        .then(function (val){ // deal with value here}, function (error) { // handle the error here });
+
+Clear the table:
+
+        $fastdb.clear()
+
+Remove an item from the store:
+
+        $fastdb.removeItem(key)
+
+Count entries on table:
+        
+        $fastdb.length()
+
+Set of keys on the table:
+
+        $fastdb.keys()
+
+
+
+## TESTS
+
+Comming soon...
+
