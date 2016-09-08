@@ -4,6 +4,12 @@ Fastdb brings indexedDB to angularJS on the cool, concise and fast promise way.
 
 The library is designed to be as simple and fast as possible.
 
+## Motivation
+We faced a lot of weird bugs on $localForage of mozilla
+
+when our data grew big (100MB-200MB) on our mobile app.
+
+
 ## Live Features
 
 * Total integration with angularJS
