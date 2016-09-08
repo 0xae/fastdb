@@ -1,12 +1,13 @@
-var fastdb = angular.module("fastDbModule", []);
+angular.module("fastDbModule", [])
 
-fastdb.constant("DB", {
+.constant("DB", {
 	name: "idrf",
 	version: 1.0
-});
-fastdb.constant("STORE", "keyvaluepairs");
+})
 
-fastdb.factory("$fastdb", function (DB, STORE, $q){
+.constant("STORE", "keyvaluepairs")
+
+.factory("$fastdb", ["DB", "STORE", "$q", function (DB, STORE, $q){
 	var db;
 	var request = indexedDB.open(DB.name, DB.version);
 
@@ -193,4 +194,4 @@ fastdb.factory("$fastdb", function (DB, STORE, $q){
 			return defered.promise;
 		}
 	}
-});
+}]);

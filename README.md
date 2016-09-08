@@ -1,12 +1,8 @@
 # fastdb
 
-Fastdb brings indexedDB to angularJS on the cool,
+Fastdb brings indexedDB to angularJS on the cool, concise and fast promise way.
 
-concise and fast promise way.
-
-The library is designed to be as simple and fast
-
-as possible we can.
+The library is designed to be as simple and fast as possible.
 
 ## Live Features
 
@@ -17,4 +13,23 @@ as possible we can.
 * plug and play (i mean inject and keep going)
 
 * Drop in replacement for mozilla [$localForage](https://github.com/localForage/localForage)
+
+## Getting Started
+
+Download the minified version.
+Specify the dependency:
+
+        angular.module('mymodule', [... , 'fastDbModule', ...])
+
+Inject the fastdb service:
+
+        angular.controller('mycontroller', function($fastdb) {
+                ...
+                $fastdb.setItem('key1', 'some value')
+                .then(function (){ console.log('set'); }, function (error) { // handle the error });
+        });
+
+## API
+
+All methods of $fastdb return promises.
 
