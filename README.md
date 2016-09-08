@@ -42,6 +42,7 @@ All methods of $fastdb return promises.
 Set an item:
 
         $fastdb.setItem(key, value)
+        .then(function (){ // success }, function (error) { // handle the error here });
 
 Get an item:
 
@@ -51,18 +52,22 @@ Get an item:
 Clear the table:
 
         $fastdb.clear()
+        .then(function (){ // success }, function (error) { // handle the error here });
 
 Remove an item from the store:
 
         $fastdb.removeItem(key)
+        .then(function (){ // success }, function (error) { // handle the error here });
 
 Count entries on table:
         
         $fastdb.length()
+        .then(function (){ // success }, function (error) { // handle the error here });
 
 Set of keys on the table:
 
         $fastdb.keys()
+        .then(function (){ // success }, function (error) { // handle the error here });
 
 
 
